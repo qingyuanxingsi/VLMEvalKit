@@ -1,4 +1,4 @@
-torchrun --nproc-per-node=2 run.py \
-    --data MMBench_DEV_EN MME SEEDBench_IMG \
+torchrun --nproc-per-node=8 run.py \
+    --data MME \
     --model qwen_chat \
     --verbose
