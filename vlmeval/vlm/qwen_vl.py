@@ -57,6 +57,7 @@ class QwenVLChat:
 
     def __init__(self, model_path='Qwen/Qwen-VL-Chat', **kwargs):
         assert model_path is not None
+        print(f'> Loading model from {model_path}')
         self.model_path = model_path
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
         self.model = AutoModelForCausalLM.from_pretrained(model_path, device_map='cuda', trust_remote_code=True).eval()

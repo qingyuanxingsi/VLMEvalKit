@@ -5,6 +5,7 @@ from vlmeval.evaluate import COCO_eval, YOrN_eval, MMVet_eval, multiple_choice_e
 from vlmeval.inference import infer_data_job, prefetch_acc
 from vlmeval.config import supported_VLM
 from vlmeval.utils import dataset_URLs, abbr2full
+import os
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -20,6 +21,7 @@ def parse_args():
 
 def main():
     logger = get_logger('RUN')
+    os.environ['LMUData'] = '/mnt/cephfs/doodleliang/data_hub/mllm_eval'
 
     args = parse_args()
     assert len(args.data), "--data should be a list of data files"

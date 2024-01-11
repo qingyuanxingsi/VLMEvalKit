@@ -20,7 +20,7 @@ llava_model_path_map = {
 models = {
     'qwen_base': partial(QwenVL, model_path='Qwen/Qwen-VL'),
     'TransCore_M': partial(TransCoreM, root=TransCore_ROOT),
-    'qwen_chat': partial(QwenVLChat, model_path='Qwen/Qwen-VL-Chat'),
+    'qwen_chat': partial(QwenVLChat, model_path='/mnt/cephfs/LLM_MODEL_HUB/qwen/Qwen-VL-Chat'),
     'PandaGPT_13B': partial(PandaGPT, name='PandaGPT_13B', root=PandaGPT_ROOT),
     'flamingov2': partial(OpenFlamingo, name='v2', mpt_pth='anas-awadalla/mpt-7b', ckpt_pth='openflamingo/OpenFlamingo-9B-vitl-mpt7b'),
     'flamingov2_fs': partial(OpenFlamingo, name='v2', with_context=True, mpt_pth='anas-awadalla/mpt-7b', ckpt_pth='openflamingo/OpenFlamingo-9B-vitl-mpt7b'),
